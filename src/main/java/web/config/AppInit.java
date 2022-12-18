@@ -15,7 +15,7 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
     @Override
     protected Class<?>[] getServletConfigClasses() {
         return new Class<?>[]{
-                WebConfig.class
+                WebConfig.class // созданный класс config
         };
     }
 
@@ -23,7 +23,9 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
     /* Данный метод указывает url, на котором будет базироваться приложение */
     @Override
     protected String[] getServletMappings() {
-        return new String[]{"/"};
+
+        return new String[]{"/"}; // ставим слэш тем самым указываем
+        // что все http- запросы от пользователя посылаем на DispatcherServlet
     }
 
 }
