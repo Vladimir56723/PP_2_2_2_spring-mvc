@@ -10,7 +10,7 @@ import java.util.List;
 @Component
 public class CarServiceImpl implements CarService {
 
-    CarDao carDao ;
+   private final CarDao carDao ;
 
     CarServiceImpl (CarDao carDao){
         this.carDao=carDao;

@@ -8,7 +8,7 @@ import java.util.List;
 @Component
 public class CarDaoImpl implements CarDao{
     private static int COUNT;
-    private List<Car> cars;
+    private  final List<Car> cars;
 
     {
         cars = new ArrayList<>();
