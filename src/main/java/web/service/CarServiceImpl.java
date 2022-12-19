@@ -10,7 +10,12 @@ import java.util.List;
 @Component
 public class CarServiceImpl implements CarService {
 
-    CarDao carDao = new CarDaoImpl();
+    CarDao carDao ;
+
+    CarServiceImpl (CarDao carDao){
+        this.carDao=carDao;
+    }
+
 
     @Override
     public List<Car> index(int count) {
